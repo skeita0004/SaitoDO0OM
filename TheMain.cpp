@@ -17,6 +17,30 @@ int WINAPI WinMain(
 	LPSTR lpCmdLine,
 	int nCmdShow)
 {
+	bool force = true;
+	if (::AttachConsole(ATTACH_PARENT_PROCESS) == FALSE)
+	{
+		if (not(force))
+		{
+			MessageBox(nullptr, "ERROR! AttachConsole.", "Information", MB_OK);
+			return -1;
+		}
+		if (::AllocConsole() == FALSE)
+		{
+			MessageBox(nullptr, "ERROR! AllocConsole.", "Information", MB_OK);
+			return -1;
+		}
+	}
+
+	FILE* fpOut = nullptr;
+	::freopen_s(&fpOut, "CONOUT$", "w", stdout);
+
+	FILE* fpErr = nullptr;
+	::freopen_s(&fpErr, "CONOUT$", "w", stderr);
+
+	FILE* fpIn  = nullptr;
+	::freopen_s(&fpIn, "CONOUT$", "w", stdin);
+
 	ChangeWindowMode(TRUE);
 
 	if (DxLib_Init() == -1)
