@@ -1,6 +1,11 @@
 #include "GameScene.h"
 #include "GameObject.h"
 
+GameScene::GameScene()
+{
+	GameObject::pGameScene_ = this;
+}
+
 void GameScene::RegisterGameObject(GameObject* _pGameObject)
 {
 	pGameObjects_.push_back(_pGameObject);

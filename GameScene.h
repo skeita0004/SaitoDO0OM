@@ -8,7 +8,7 @@ class GameScene
 	friend class GameObject;
 	friend class Game;
 public:
-	GameScene() {}
+	GameScene();
 	virtual ~GameScene() {}
 
 protected:

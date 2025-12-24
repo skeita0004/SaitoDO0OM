@@ -146,10 +146,15 @@
     <ClCompile Include="DO0OM.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="Network\IPEndPoint.cpp" />
+    <ClCompile Include="Network\NetworkManager.cpp" />
+    <ClCompile Include="Network\TcpClient.cpp" />
     <ClCompile Include="TheMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Common\ProtocolHeader.h" />
     <ClInclude Include="DO0OM.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
@@ -157,6 +162,16 @@
     <ClInclude Include="IncludeJson.h" />
     <ClInclude Include="Library\json.hpp" />
     <ClInclude Include="Library\json_fwd.hpp" />
+    <ClInclude Include="Network\Common.h" />
+    <ClInclude Include="Network\IPEndPoint.h" />
+    <ClInclude Include="Network\IRecvMessage.h" />
+    <ClInclude Include="Network\ISendMessage.h" />
+    <ClInclude Include="Network\Json.h" />
+    <ClInclude Include="Network\NetworkManager.h" />
+    <ClInclude Include="Network\ServerJoiner.h" />
+    <ClInclude Include="Network\Socket.h" />
+    <ClInclude Include="Network\TcpClient.h" />
+    <ClInclude Include="Network\UDPClient.h" />
     <ClInclude Include="Stage.h" />
   </ItemGroup>
   <ItemGroup>

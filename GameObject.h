@@ -1,11 +1,10 @@
 #pragma once
 #include <DxLib.h>
 
-class GameScene;
-
 class GameObject
 {
 	friend class Game;
+	friend class GameScene;
 public:
 	GameObject();
 	virtual ~GameObject();
